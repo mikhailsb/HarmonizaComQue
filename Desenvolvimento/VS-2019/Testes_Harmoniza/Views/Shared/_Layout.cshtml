@@ -9,39 +9,323 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Quem Somos", "About", "Home")</li>
-                    <li>@Html.ActionLink("Parceiros", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Loja", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Acessar", "Contact", "Home")</li>
-                    <li class="dropdown">
-                        <ul class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                            Cadastro
-                        </ul>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li>@Html.ActionLink("Acessar", "Contact", "Home")</li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+            <a class="navbar-brand" href="#">Harmoniza Com Que?</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Quem Somos", "About", "Home")
+                    </li>
+                    <li class="nav-item nav-link">
+                        @Html.ActionLink("Parceiros", "Contact", "Home")
+                    </li>
+                    @*Campo Text de busca*@
+                    <li>
+                        <form class="form-inline navbar-left my-2 my-md-0">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item navbar-right nav-link">
+                        @Html.ActionLink("Acessar", "Contact", "Home")
+                    </li>
+                    <li class="nav-item navbar-right dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-menu-right" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastro</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item">@Html.ActionLink("Cerveja", "Contact", "Home")</li>
+                            <li class="dropdown-item">@Html.ActionLink("Cervejaria", "Contact", "Home")</li>
+                            <li class="dropdown-item">@Html.ActionLink("Estilos de cerveja", "Contact", "Home")</li>
+                            <li class="dropdown-item" href="#">@Html.ActionLink("Vinho", "Contact", "Home")</li>
+                            <li class="dropdown-item" href="#">@Html.ActionLink("Vinícula", "Contact", "Home")</li>
+                            <li class="dropdown-item" href="#">@Html.ActionLink("Estilo de Vinho", "Contact", "Home")</li>
+                            <li class="dropdown-item" href="#">@Html.ActionLink("Receitas", "Contact", "Home")</li>
                         </ul>
                     </li>
                 </ul>
-            </div>
+
         </div>
-    </div>
+        </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <section class="menuBar">
+        <nav class="navbar navbar-expand-lg navbar-light" data-toggle="sticky-onscroll">
+            <div class="container">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="mainNavbar" style="">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Commercial Appliances</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Refrigeration</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Refrigerators</a></li>
+                                        <li><a class="dropdown-item" href="#">Freezers</a></li>
+                                        <li><a class="dropdown-item" href="#">Walk-in Coolers/Refrigerators</a></li>
+                                        <li><a class="dropdown-item" href="#">Walk-in Freezers</a></li>
+                                        <li><a class="dropdown-item" href="#">Commercial Freezers</a></li>
+                                        <li><a class="dropdown-item" href="#">Commercial Refrigerators</a></li>
+                                        <li><a class="dropdown-item" href="#">Salad Bars</a></li>
+                                        <li><a class="dropdown-item" href="#">Sandwich Coolers</a></li>
+                                        <li><a class="dropdown-item" href="#">Wine Coolers</a></li>
+                                        <li><a class="dropdown-item" href="#">Ice Machines</a></li>
+                                        <li><a class="dropdown-item" href="#">Beer Coolers</a></li>
+                                        <li><a class="dropdown-item" href="#">Kegerators</a></li>
+                                        <li><a class="dropdown-item" href="#">Flower Coolers</a></li>
+                                        <li><a class="dropdown-item" href="#">Remote Condensers</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Cooking Equipment</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Commercial Ovens</a></li>
+                                        <li><a class="dropdown-item" href="#">Stoves/Ranges</a></li>
+                                        <li><a class="dropdown-item" href="#">Cooktops</a></li>
+                                        <li><a class="dropdown-item" href="#">Convection Ovens</a></li>
+                                        <li><a class="dropdown-item" href="#">Salamander Ovens/Broilers</a></li>
+                                        <li><a class="dropdown-item" href="#">Double Ovens</a></li>
+                                        <li><a class="dropdown-item" href="#">Grills</a></li>
+                                        <li><a class="dropdown-item" href="#">Wall Ovens</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Microwaves</a></li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Griddles</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Hot Plates</a></li>
+                                        <li><a class="dropdown-item" href="#">Wok Ranges</a></li>
+                                        <li><a class="dropdown-item" href="#">Warmers</a></li>
+                                        <li><a class="dropdown-item" href="#">Deep Fryers</a></li>
+                                        <li><a class="dropdown-item" href="#">Steam Table</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Ice Machines / Ice Makers</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Countertop</a></li>
+                                        <li><a class="dropdown-item" href="#">Remote condenser</a></li>
+                                        <li><a class="dropdown-item" href="#">Modular</a></li>
+                                        <li><a class="dropdown-item" href="#">Under counter</a></li>
+                                        <li><a class="dropdown-item" href="#">Water filters</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Commercial Dishwashers</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Door Type</a></li>
+                                        <li><a class="dropdown-item" href="#">Conveyor Type</a></li>
+                                        <li><a class="dropdown-item" href="#">Under counter</a></li>
+                                        <li><a class="dropdown-item" href="#">Glasswasher</a></li>
+                                        <li><a class="dropdown-item" href="#">High Temperature Dishwashers</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Commercial Laundry</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Washers</a></li>
+                                        <li><a class="dropdown-item" href="#">Tumble Dryers (Gas/Electric)</a></li>
+                                        <li><a class="dropdown-item" href="#">Coin-operated Washer / Dryer</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Ventilation / Exhaust</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Commercial Kitchen Hoods</a></li>
+                                        <li><a class="dropdown-item" href="#">Exhaust Fans</a></li>
+                                        <li><a class="dropdown-item" href="#">Direct Drive Fans</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Water Heaters</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Electric / Gas Tankless Heaters</a></li>
+                                        <li><a class="dropdown-item" href="#">Electric / Gas Tank Heaters</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Garbage Disposals</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Food Wasters</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Residential Appliances</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Refrigerators / Freezers</a></li>
+                                <li><a class="dropdown-item" href="#">Wine  Cooler</a></li>
+                                <li><a class="dropdown-item" href="#">Ice Makers</a></li>
+                                <li><a class="dropdown-item" href="#">Washer Machine</a></li>
+                                <li><a class="dropdown-item" href="#">Gas / Electric Dryer</a></li>
+                                <li><a class="dropdown-item" href="#">Wall Ovens</a></li>
+                                <li><a class="dropdown-item" href="#">Double Ovens</a></li>
+                                <li><a class="dropdown-item" href="#">Ranges</a></li>
+                                <li><a class="dropdown-item" href="#">Cooktops</a></li>
+                                <li><a class="dropdown-item" href="#">Microwaves</a></li>
+                                <li><a class="dropdown-item" href="#">Dishwasher</a></li>
+                                <li><a class="dropdown-item" href="#">Garbage Disposal</a></li>
+                                <li><a class="dropdown-item" href="#">Vent Hood</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HVAC</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Split system </a></li>
+                                <li><a class="dropdown-item" href="#">Minisplit Ductless systems</a></li>
+                                <li><a class="dropdown-item" href="#">Packaged System</a></li>
+                                <li><a class="dropdown-item" href="#">Gas / Electric Furnace</a></li>
+                                <li><a class="dropdown-item" href="#">Heat Pumps</a></li>
+                                <li><a class="dropdown-item" href="#">Evaporator Coils</a></li>
+                                <li><a class="dropdown-item" href="#">Thermostat</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Installation</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Refrigeration Equipment</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Walk-in Cooler Installation</a></li>
+                                        <li><a class="dropdown-item" href="#">Ice Machine</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Cooking Equipment</a></li>
+                                <li><a class="dropdown-item" href="#">Commercial Dishwashers</a></li>
+                                <li>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Commercial Laundry</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Washers</a></li>
+                                        <li><a class="dropdown-item" href="#">Dryers</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">HVAC</a></li>
+                                <li><a class="dropdown-item" href="#">Ventilation / Exhaust</a></li>
+                                <li><a class="dropdown-item" href="#">Water Heaters</a></li>
+                                <li><a class="dropdown-item" href="#">Garbage Disposals</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="maintenance-programs.php">Maintenance Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.php">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-red" href="#">Book Now</a>
+            </div>
+        </nav>
+    </section>
+
+
+    @*
+        <nav class="navbar navbar-fixed-top navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Harmoniza Com Que?</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">@Html.ActionLink("Quem Somos", "About", "Home")<span class="sr-only">(current)</span></a></li>
+                        <li>@Html.ActionLink("Parceiros", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Parceiros", "Contact", "Home")</li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Pesquisar</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Acessar</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Cerveja</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Cervejas</a></li>
+                                            <li><a href="#">Cervejarias</a></li>
+                                            <li><a href="#">Receitas</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </li>
+                                <li><a href="#">Vinho</a></li>
+                                <li><a href="#">Receitas</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Quem Somos", "About", "Home")</li>    ---  OK
+                            <li>@Html.ActionLink("Parceiros", "Contact", "Home")</li>    ---  OK
+                            <li>@Html.ActionLink("Loja", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Acessar", "Contact", "Home")</li>
+                            <li class="dropdown">
+                                <ul class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                    Cadastro
+                                </ul>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>@Html.ActionLink("Acessar", "Contact", "Home")</li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    *@
     <div class="container body-content">
         @RenderBody()
         <hr />
